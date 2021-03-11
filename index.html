@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+      <title>Hello Accusoft PDF Viewer via CDN</title>
+
+      <!-- Prevent viewport scaling on mobile devices.
+           See https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+      <style>
+        /* Force the body height to the size of the browser. */
+        html,
+        body {
+          height: 100%;
+        }
+
+        /* Size the viewer as desired. In this case, we fill the browser window. */
+        #viewer-container {
+          height: 100%;
+        }
+      </style>
+
+      <!-- Import the @accusoft/pdf-viewer bundle.js from an npm CDN mirror.
+           Adding this bundle.js makes window.Accusoft.PdfViewerControl available. -->
+      <script src="https://cdn.jsdelivr.net/npm/@accusoft/pdf-viewer@1/bundle.js"></script>
+  </head>
+  <body>
+    <!-- Define a container where the viewer will go. -->
+    <div id="viewer-container"></div>
+    <script>
+      // Create the viewer:
+      (async () => {
+        window.Accusoft.PdfViewerControl.create({
+          sourceDocument: 'example.pdf',
+          container: document.getElementById('viewer-container')
+        });
+      })();
+    </script>
+  </body>
+</html>

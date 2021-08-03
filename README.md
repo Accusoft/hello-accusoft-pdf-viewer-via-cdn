@@ -1,5 +1,7 @@
 # Hello Accusoft PDF Viewer via CDN
 
+![Accusoft PDF Viewer Illustration](https://resource.accusoft.com/r01/wp-content/uploads/APDFV_Professional-Version-turq-730-banner.png)
+
 Minimal example of an HTML page which uses [Accusoft PDF
 Viewer](https://www.npmjs.com/package/@accusoft/pdf-viewer) via a `<script>` tag
 and CDN URL to display a PDF.
@@ -22,3 +24,12 @@ sample. For example, if you have npm installed, you can run:
 
 This will start a local web server running at (typically)
 `http://localhost:5000`. Open this URL in your browser to view the sample.
+
+## About Accusoft PDF Viewer
+
+Note this example utilizes the Standard version of Accusoft PDF Viewer, which
+is completely free to use. Our enhanced features like annotation and eSignature
+are part of our Professional Version which you will need a
+[trial key](https://www.accusoft.com/products/pdf-collection/accusoft-pdf-viewer-professional-trial)
+to evaluate. You can also email info@accusoft.com or call us at 1-800-875-7009
+for more information on our paid product and licensing.

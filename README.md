@@ -25,6 +25,48 @@ sample. For example, if you have npm installed, you can run:
 This will start a local web server running at (typically)
 `http://localhost:5000`. Open this URL in your browser to view the sample.
 
+## Evaluation of All Features
+
+This sample is set up for an evaluation of all features. In this mode,
+all functionality is available without a license, but the document will
+show a watermark on it. You can find out more about the available control
+[here](https://help.accusoft.com/accusoft-pdf-viewer/latest/api/classes/pdfviewercontrol.html#create).
+
+The code to enable features looks like this:
+
+```javascript
+await window.Accusoft.PdfViewerControl.create({
+  sourceDocument: sourceDocument,
+  container: document.getElementById('viewer-container'),
+
+  // Evaluate Professional features (page contents will be watermarked)
+  licenseKey: 'eval',
+
+  // Configure the UI:
+  allowedControls: {
+    // Enable or disable annotation tools (all false by default):
+    annotationList: true,
+    ellipseTool: true,
+    freehandDrawingTool: true,
+    freehandSignatureTool: true,
+    lineTool: true,
+    outline: true,
+    rectangleTool: true,
+    textHighlightTool: true,
+    thumbnails: true,
+
+    // Enable or disable other parts of the UI (all true by default):
+    fullScreenToggle: true,
+    nextAndPreviousPageButtons: true,
+    pageNumberAndCount: true,
+    printing: true,
+    search: true,
+    thumbnails: true,
+    zoomInAndOutButtons: true
+  }
+});
+```
+
 ## About Accusoft PDF Viewer
 
 Note this example utilizes the Standard version of Accusoft PDF Viewer, which

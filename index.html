@@ -30,9 +30,32 @@
     <script>
       // Create the viewer:
       (async () => {
-        window.Accusoft.PdfViewerControl.create({
+        await window.Accusoft.PdfViewerControl.create({
           sourceDocument: 'example.pdf',
-          container: document.getElementById('viewer-container')
+          container: document.getElementById('viewer-container'),
+
+          // Evaluation of all features:
+          licenseKey: 'eval',
+          allowedControls: {
+            // Enable or disable annotation tools (all false by default):
+            annotationList: true,
+            ellipseTool: true,
+            freehandDrawingTool: true,
+            freehandSignatureTool: true,
+            lineTool: true,
+            outline: true,
+            rectangleTool: true,
+            textHighlightTool: true,
+
+            // Enable or disable other parts of the UI (all true by default):
+            fullScreenToggle: true,
+            nextAndPreviousPageButtons: true,
+            pageNumberAndCount: true,
+            printing: true,
+            search: true,
+            thumbnails: true,
+            zoomInAndOutButtons: true
+          }
         });
       })();
     </script>
